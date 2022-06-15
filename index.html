@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>rickroll anyone!</title>
+    <script src="https://raw.githubusercontent.com/davidshimjs/qrcodejs/master/qrcode.min.js"></script>
+</head>
+<body>
+    <div style="display: flex; justify-content: center">
+        <h1>rickroll anyone!</h1>
+        <button onclick="generate()">press this button to generate a qr code!</button>
+        <div id="qr"></div>
+    </div>
+
+    <script>
+        function generate() {
+            var qr = new QRCode("qr")
+
+            qr.clear()
+            qr.makeCode("https://kingofsponges.github.io/rickroll-anyone/hehe.html?" + btoa(Math.floor(Math.random() * 999 + 100).toString()))
+        }
+    </script>
+</body>
+</html>
